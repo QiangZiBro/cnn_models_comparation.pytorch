@@ -6,16 +6,32 @@
 - 对不同CNN网络性能进行进行比较
 - 使深度学习代码工程化，项目模板参考了[pytorch-template](https://github.com/victoresque/pytorch-template)，用好这些模板会很方便做实验，我对模板进行了部分修改。
 
-## 零、如何运行
+## 零、如何运行 
+
+Detailed docs is coming...:beers:
+
+- 准备数据
+
+数据集放在`data/`目录下。通常，我们不建议直接将数据集放在项目里，而是放在一个共有目录下，比如 `~/data`，再使用软链接：
+
+```bash
+cd data
+ln -s ~/data/cifar-10-batches-py cifar-10-batches-py
+cd ..
+```
+
+- 运行所有网络，训练的模型和日志储存在`saved/`文件夹里
 
 ```bash
 # 训练所有网络
 bash run.sh
 ```
 
+- 用训练好的模型对测试集进行评估
 
-
-doc is coming...:beers:
+```bash
+python test.py --resume path-to-checkpoint.pth
+```
 
 ## 一、操作环境
 
@@ -34,13 +50,15 @@ doc is coming...:beers:
 
 ## 三、目前使用的模型
 
-- [x] AlexNet
 - [x] LeNet
+- [x] AlexNet
 - [x] NiN
 - [x] GoogLeNet
 - [x] Batch Normalization using LeNet
 - [x] ResNet
 - [ ] DenseNet
+- [ ] CapsNet
+- [ ] AdderNet
 
 ...
 
