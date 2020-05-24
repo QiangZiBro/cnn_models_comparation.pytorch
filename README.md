@@ -95,12 +95,12 @@ ssh -N -f -L localhost:16006:localhost:6006 qiangzibro@lab1
 - early stop:10
 - Learning rate:0.001
 
-| 模型                            | 训练准确率 | 测试准确率 |
-| ------------------------------- | ---------- | ---------- |
-| AlexNet                         |            |            |
-| LeNet                           |            |            |
-| NiN                             |            |            |
-| GoogLeNet                       |            |            |
-| Batch Normalization using LeNet |            |            |
-| ResNet                          |            |            |
+| 模型                            | 训练准确率 | 测试准确率 | top3准确率 |
+| ------------------------------- | ---------- | ---------- | ---------- |
+| AlexNet                         | 0.9220     | 0.6992     | 0.9073     |
+| LeNet                           | 0.7706     | 0.5940     | 0.8703     |
+| NiN                             |            | 0.3678     | 0.4675     |
+| GoogLeNet                       |            |            |            |
+| Batch Normalization using LeNet |            |            |            |
+| ResNet                          | 0.9773     | 0.7279     | 0.9277     |
 
